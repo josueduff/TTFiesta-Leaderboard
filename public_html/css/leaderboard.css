@@ -1,0 +1,160 @@
+/*Bold*/
+@font-face {
+    src: url(/public_html/fonts/OpenSans-Bold.woff);
+    font-family: 'Open Sansx';
+    font-weight: bold;
+}
+
+/*Semi Bold*/
+@font-face {
+    src: url(/public_html/fonts/OpenSans-Semibold.woff);
+    font-family: 'Open Sansx';
+    font-weight: 600;
+}
+
+/*Regular*/
+@font-face {
+    src: url(/public_html/fonts/OpenSans-Regular.woff);
+    font-family: 'Open Sansx';
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F1F5;
+    font-family: 'Open Sansx', sans-serif;
+    column-width: 100vw;
+    column-gap: 0;
+    height: 100vh;
+    margin: 8px auto;
+    min-height: 60px;    
+    min-width: 100vw; 
+    padding: 0;
+    overflow: hidden;
+}
+
+#container {
+    height: calc(100vh - 26px); 
+    margin: 0 auto;
+    max-width: calc(100vw - 22px);
+    min-width: 948px;
+    padding: 0;
+}
+
+.category {
+    break-inside: avoid-column;
+    display: block;
+    float: left;  
+    position: relative;  
+    margin-bottom: 8px;
+    width: 100%;
+    -webkit-break-inside: avoid-column;
+}
+
+.category[data-disabled] {
+    display: none;
+}
+
+.category > header {
+    background-color: #2980b9;
+    border-radius: 3px 3px 0 0;    
+    border: 1px solid #2980b9;
+    border-bottom: none;
+    color: #ecf0f1;
+    font-size: 15px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.category[data-category$="F"] > header {
+    background-color: #8e44ad;
+    border: 1px solid #8e44ad;
+}
+
+header > span {
+    font-size: 18px;
+    margin-left: 18px; 
+}
+
+.times {
+    float: right;
+    margin-right: 8px;
+}
+
+.times span, .times time {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    margin-right: 8px;
+    padding-right: 8px;
+}
+
+.times *:last-child {
+    margin-right: 0;
+}
+
+.rider {
+    float: left;
+    width: 100%;
+    background: #FEFEFE;
+    border: 1px solid #D4D4D4;
+    border-top: none;
+    color: #3F3F3F;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    break-inside: avoid;
+    -webkit-column-break-before: always;
+    -webkit-column-break-inside: avoid;
+}
+
+.rider:last-of-type {
+    border-radius: 0 0 3px 3px;
+}
+
+.rider > span {
+    padding: 0 8px;
+    float: left;
+}
+
+/*Bib Number*/
+.rider > span:first-of-type {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 48px;
+}
+
+/*Rider Name and Team Name*/
+.rider > span:nth-of-type(n+2):nth-of-type(-n+3) { width: 233px; }
+
+/*Times*/
+time {    
+    background-image: linear-gradient(to top, #D1D5D8 100%, black 0);
+    background-size: 5px 0;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+    transition: background-size .5s, color .5s;
+}
+
+time[data-time="TBA"], time[data-time^="D"] {
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .4);
+}
+
+time::before {
+    content: attr(data-time);
+}
+
+time:last-of-type {
+    font-weight: 600;
+    margin-right: 0;
+}

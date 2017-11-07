@@ -1,0 +1,19 @@
+{
+  "name": "ttfiesta",
+  "version": "0.0.1",
+  "author": "Josué Duff <josue.duff@yahoo.ca>",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8"
+  },
+  "description": "Live leaderboard for the TTFiesta race",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon app.js -w app.js -w dataController.js -w routes"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TTFiesta Leaderboard</title>
+        <link rel="stylesheet" type="text/css" href="/public_html/css/leaderboard.css">
+        <link rel="icon" type="image/icon" href="/public_html/images/favicon.ico">
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script src="/public_html/js/Leaderboard.js"></script>
+        <script>
+            console.log('Current dateTime: ' + new Date().toISOString());
+
+            Leaderboard.container = document.getElementById("container");
+            Leaderboard.init();
+
+            Leaderboard.switchPages();
+        </script>
+        
+    </body>
+</html>

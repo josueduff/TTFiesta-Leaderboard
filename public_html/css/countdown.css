@@ -1,0 +1,98 @@
+body {
+    background-color: #212121;
+    font-family: roboto;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logo {
+    background-image: url(/public_html/images/ttfiesta_logo.svg);
+    background-repeat: no-repeat;
+    margin: 10px auto;
+    width: 256px;
+    height: 108px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+time {
+    color: rgba(255, 255, 255, .87);                
+    font-size: 30vw;
+    text-align: center;
+    margin-bottom: 0;
+    width: 100vw;
+}
+
+time[data-time="5"],
+time[data-time="4"],
+time[data-time="3"],
+time[data-time="2"],
+time[data-time="1"] {
+    color: #d32f2f;
+    animation-duration: .3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes blink {
+    0% { transform: scale(1)}
+    38% { transform: scale(1.1) }
+    100% { transform: scale(1) }
+}
+
+#riders {
+    line-height: 15px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.upcoming-rider {
+    height: 32px;
+    width: 200px;
+    margin-bottom: 8px;
+    margin-left: -40px;
+    padding: 0;
+    opacity: 0.2;
+}
+
+
+.upcoming-rider:first-child {
+    opacity: 1;
+}
+
+.upcoming-rider:first-child .bib-number {
+    background-color: #2196F3;
+}
+
+.bib-number {
+    display: inline-block;
+    background-color: #9E9E9E;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.870);
+    font-size: 18px;
+    font-weight: bold;
+    height: 15px;
+    padding: 10px;
+    margin-right: 16px;
+    text-align: center;    
+    width: 32px;
+}
+
+.name {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 16px;
+}  

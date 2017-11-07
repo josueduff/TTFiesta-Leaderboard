@@ -1,0 +1,44 @@
+<!DOCTPYE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/public_html/css/timing_point.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#448AFF">
+    </head>
+    <body data-keyboard-active="false" data-checkpoint="B">
+        <header>
+            <span id="title">Timing Point</span>
+            <select id="menu">
+                <optgroup label="Checkpoints">
+                    <option>B</option>
+                    <option>D</option>                        
+                    <option>E</option>
+                    <option>G</option>
+                </optgroup>
+                <optgroup label="Finish lines">                        
+                    <option>F</option>
+                    <option>J</option>
+                </optgroup>
+            </select>
+        </header>
+            <table id="timeline-container">
+
+                <template id="row-template">
+                    <tr data-status=''>
+                        <td class="status"><div></div></td>
+                        <td class="timestamp"></td>
+                        <td class="inputs">
+                            <input type="number" max="999" placeholder="bib">
+                            <div class="direction-toggle" data-enabled="false"></div>
+                            <div class="delete-button" data-enabled="false"></div>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        
+        <div id="button-container"><div id="timesplit-button">Split</div></div>
+        
+        <script src="/public_html/js/timing_point.js"></script>
+    </body>
+</html>
